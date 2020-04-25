@@ -286,6 +286,20 @@ declare namespace marked {
             type: 'text';
             text: string;
         }
+        
+        interface Strong {
+            type: 'strong';
+            raw: string;
+            text: string;
+            tokens: Tokens[];
+        }
+        
+        interface Emphasis {
+            type: 'em';
+            raw: string;
+            text: string;
+            tokens: Tokens[];
+        }
 
         interface Image {
             type: 'image';
