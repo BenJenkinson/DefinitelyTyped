@@ -210,6 +210,8 @@ declare namespace marked {
         | Tokens.Paragraph
         | Tokens.HTML
         | Tokens.Text
+        | Tokens.Strong
+        | Tokens.Emphasis
         | Tokens.Image;
 
     namespace Tokens {
