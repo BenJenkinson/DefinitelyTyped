@@ -230,6 +230,7 @@ declare namespace marked {
             type: 'heading';
             depth: number;
             text: string;
+            tokens: Token[];
         }
 
         interface Table {
@@ -241,6 +242,13 @@ declare namespace marked {
 
         interface Hr {
             type: 'hr';
+        }
+        
+        interface Blockquote {
+            type: 'blockquote';
+            raw: string;
+            text: string;
+            tokens: Token[];
         }
 
         interface BlockquoteStart {
@@ -276,6 +284,7 @@ declare namespace marked {
             type: 'paragraph';
             pre?: boolean;
             text: string;
+            tokens: Token[];
         }
 
         interface HTML {
@@ -293,14 +302,14 @@ declare namespace marked {
             type: 'strong';
             raw: string;
             text: string;
-            tokens: Tokens[];
+            tokens: Token[];
         }
         
         interface Emphasis {
             type: 'em';
             raw: string;
             text: string;
-            tokens: Tokens[];
+            tokens: Token[];
         }
 
         interface Image {
