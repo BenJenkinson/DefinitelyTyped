@@ -209,7 +209,8 @@ declare namespace marked {
         | Tokens.ListEnd
         | Tokens.Paragraph
         | Tokens.HTML
-        | Tokens.Text;
+        | Tokens.Text
+        | Tokens.Image;
 
     namespace Tokens {
         interface Space {
@@ -284,6 +285,20 @@ declare namespace marked {
         interface Text {
             type: 'text';
             text: string;
+        }
+
+        interface Image {
+            type: 'image';
+            raw: string;
+            href: string;
+            /**
+             * The image alt text.
+             */
+            text: string;
+            /**
+             * The image title. (`null` if omitted)
+             */
+            title: string | null; 
         }
     }
 
